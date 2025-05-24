@@ -6,24 +6,24 @@ This repo contains a Streamlit clinical dashboard using the MIMIC-IV Dataset
 ## Structure
 ```
 HeartTrack/
-├── local/                        # PLEASE USE THIS, THE CLOUD VERSION WILL NOT WORK. SEE REPORT AS TO WHY
+├── DataSys(local)/                        # PLEASE USE THIS, THE CLOUD VERSION WILL NOT WORK. SEE REPORT AS TO WHY
 │   ├── app.py
 │   ├── hash.py
 │   ├── main.py
 │   ├── README.md
 │   ├── requirements.txt
-│   ├── credentials.yaml          # (Optional) For login functionality (not implemented)
-│   ├── tables/                   # Local data (mimics BigQuery tables)
+│   ├── credentials.yaml            # (Optional) For login functionality (not implemented)
+│   ├── tables/                     # Local data (mimics BigQuery tables)
 │   │   ├── fact_admissions.csv
 │   │   ├── fact_vitals.csv
 │   │   └── fact_lab_results.csv
-│   └── pages/                    # Streamlit pages
+│   └── pages/                      # Streamlit pages
 │       ├── byhospital.py
 │       ├── patientchart.py
 │       └── patientlist.py
 │
-├── cloudver/                    # DO NOT USE THE CLOUD VERSION TO RUN THE APP. YOU CAN CHECK THE CODE TO SEE HOW BIG QUERY WAS IMPLEMENTED
-│   ├── app.py                   # BUT THE CLOUD VERSION WILL NOT LOAD THE DATA DUE TO CLOUD COSTS.
+├── DataSys(cloudver)/             # DO NOT USE THE CLOUD VERSION TO RUN THE APP. YOU CAN CHECK THE CODE TO SEE HOW BIG QUERY WAS IMPLEMENTED
+│   ├── app.py                     # BUT THE CLOUD VERSION WILL NOT LOAD THE DATA DUE TO CLOUD COSTS.
 │   ├── hash.py
 │   ├── main.py
 │   ├── quick_test.py
@@ -53,7 +53,10 @@ HeartTrack/
 pip install -r requirements.txt
 ```
 
-3. Run the app by using streamlit
+3. Download the CSV tables from: https://studentutsedu-my.sharepoint.com/:f:/g/personal/junichi_m_ocena_student_uts_edu_au/Et6witsCejBJsNBkEq2QsqEBPYGFuAOzU0llcfd6kLTz3w?e=W5mB91
+   and place it on the same directory as DataSys(local)
+
+4. Run the app by using streamlit
 ```
 streamlit run main.py
 ```
