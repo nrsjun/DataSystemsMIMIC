@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+plotly
+altair
+google-cloud-bigquery
+google-cloud-storage
+google-auth
+db-dtypes
+pydantic
+watchdog
+streamlit-aggrid
+streamlit-authenticator
+pyyaml
